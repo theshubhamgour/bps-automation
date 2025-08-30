@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Test Page</title>
+
+  <!-- Basic reset and a tiny bit of styling for visibility -->
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
+    header, footer { padding: 1rem; background: #f2f2f2; }
+    main { padding: 1rem; }
+    .card { padding: 1rem; border: 1px solid #ddd; border-radius: .5rem; }
+    button { padding: .5rem .75rem; cursor: pointer; }
+  </style>
+
+  <!-- Optional: place your scripts at the end of body with defer -->
+  <script defer>
+    // Simple JS test
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('testButton');
+      const out = document.getElementById('output');
+      btn.addEventListener('click', () => {
+        out.textContent = 'JS is working ✅ — ' + new Date().toLocaleString();
+      });
+    });
+  </script>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>HTML Boilerplate</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Quick Test</h2>
+      <p>If you can see this, HTML & CSS loaded. Click the button to test JS:</p>
+      <button id="testButton" type="button">Run Test</button>
+      <p id="output" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Test</small>
+  </footer>
+
+  <script>
+    // Tiny enhancement: set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
