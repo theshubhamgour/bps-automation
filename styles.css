@@ -1,0 +1,32 @@
+/* Basic styling */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  background: #fafafa;
+  color: #333;
+}
+
+header, footer {
+  padding: 1rem;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+button {
+  padding: .5rem .75rem;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
